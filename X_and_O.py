@@ -5,12 +5,12 @@ import re
 
 def xo(s):
     # Finding x's in the given string
-    x_findings = re.findall('x', s)
+    x_findings = re.findall('x', s.lower())
     # Counting how many 'x' letters there are
     x_count = len(x_findings)
 
     # Finding o's in the given string
-    o_findings = re.findall('o', s)
+    o_findings = re.findall('o', s.lower())
     # Counting how many 'o' letters there are
     o_count = len(o_findings)
 
