@@ -9,32 +9,31 @@ import re
 
 def validate_pin(pin=str):
     #return true or false
+    listas = []
+    for i in str(pin):
+        listas.append(i) 
+        if listas[0] == '0':
+            listas.insert(1, 'o')
+            final = ''.join(listas)
+            return True
+
     four_digits_check = re.search("^\d{4}$", str(pin))
     six_digits_check = re.search("^\d{6}$", str(pin))
 
-    
-
     if four_digits_check == "1234":
+        return False
+
+    elif len(str(pin)) > 4:
         return False
 
     elif four_digits_check or six_digits_check:
         return True
 
-
-    listas = []
-    for i in str(pin):
-        listas.append(i) 
-        if listas[0] == '0':
-            listas.insert(1, 'x')
-        final = ''.join(listas)
-        return final
-
-
     else:
         return False    
     
 
-print(validate_pin(22))
+print(validate_pin('098765'))
 
 # training = 9876
 
