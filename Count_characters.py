@@ -16,4 +16,4 @@ def count(string):
     else:
         return {}
 
-print(letters_counter('abcda'))
+print(count('abcda'))
