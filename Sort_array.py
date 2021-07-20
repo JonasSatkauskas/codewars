@@ -9,4 +9,8 @@ Your function would return the following array:
 
 
 def sort_by_length(arr):
-    pass
+    sorted_arr = sorted(arr, key=len)
+    return sorted_arr
+
+
+print(sort_by_length(["Telescopes", "Glasses", "Eyes", "Monocles"]))
