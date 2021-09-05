@@ -12,6 +12,18 @@ A string consists of lowercase latin letters, digits and symbols.
 
     [output] a string
 """
+import re
+
 
 def reverse_letter(string):
-    #do your magic here
+    if string.isalpha():
+        return string[::-1]
+    else:
+        regex = re.findall('[^1,2,3,4,5,6,7,8,9,0,\W]', string)
+        first_stop = ''.join(regex)
+        regex2 = re.findall('[^_]', first_stop)
+        result = ''.join(regex2)
+        return result[::-1]
+
+
+print(reverse_letter('Hell89_o'))
