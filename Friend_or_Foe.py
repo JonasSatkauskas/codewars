@@ -12,4 +12,11 @@ Note: keep the original order of the names in the output.
 """
 
 def friend(x):
-    pass
+    friend_list = []
+    for i in x:
+        if len(i) == 4:
+            friend_list.append(i)
+        else:
+            pass
+
+    return friend_list
